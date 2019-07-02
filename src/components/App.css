@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+}
+
+.brand-logo {
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.nav-li:hover {
+  color: white;
+}
+
+.navbar-brand > img {
+  padding-left: 25px;
+}
