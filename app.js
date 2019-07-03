@@ -1,10 +1,12 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const passport = require("passport");
 
 const app = express();
 
 const db = require("./config/keys").mongoURI;
 
+const users = require("./routes/api/users");
 const aA = require("./routes/api/appacademy");
 const bloc = require("./routes/api/bloc");
 const cD = require("./routes/api/codingdojo");
@@ -19,7 +21,13 @@ mongoose
   .then(() => console.log("Connected to MongoDB successfully"))
   .catch(err => console.log(err));
 
-app.get("/", (req, res) => res.send("Hello World, I'm ready"));
+app.use(passport.initialize());
+require("./config/passport")(passport);
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+app.use("/api/users", users);
 app.use("/api/appacademy", aA);
 app.use("/api/bloc", bloc);
 app.use("/api/codingdojo", cD);
@@ -27,9 +35,6 @@ app.use("/api/flatiron", fI);
 app.use("/api/generalassembly", gA);
 app.use("/api/hackreactor", hR);
 app.use("/api/thinkful", thinkful);
-
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
 
 const port = process.env.PORT || 5000;
 

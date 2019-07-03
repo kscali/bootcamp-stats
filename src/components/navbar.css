@@ -15,3 +15,12 @@
 a.nav-link.bootcamp-links {
   text-shadow: 2px 2px 4px #000000;
 }
+
+.signup {
+  color: white;
+}
+
+.login {
+  color: white;
+  margin-left: 10px;
+}
