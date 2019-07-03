@@ -1,11 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import icon from "../images/favicon.ico";
 import "./navbar.css";
 
 class Navbar extends React.Component {
   constructor(props) {
     super(props);
+
     this.logoutUser = this.logoutUser.bind(this);
     this.getLinks = this.getLinks.bind(this);
   }
@@ -13,15 +14,23 @@ class Navbar extends React.Component {
   logoutUser(e) {
     e.preventDefault();
     this.props.logout();
+    this.props.history.push("/");
   }
 
   getLinks() {
     if (this.props.loggedIn) {
       return (
         <div>
-          <Link to={"/profile"}>Profile</Link>
+          <Link
+            className="profile"
+            to={`/profile/${this.props.currentUser.id}`}
+          >
+            Profile
+          </Link>
 
-          <button onClick={this.logoutUser}>Logout</button>
+          <button className="logout" onClick={this.logoutUser}>
+            Logout
+          </button>
         </div>
       );
     } else {
@@ -41,12 +50,12 @@ class Navbar extends React.Component {
   render() {
     return (
       <nav className="navbar navbar-expand-lg navbar-dark ">
-        <a className="navbar-brand" href="#">
+        <Link className="navbar-brand" to="/">
           <img src={icon} alt="bootcamp-stats" />
-        </a>
-        <a className="navbar-brand brand-logo" href="#">
+        </Link>
+        <Link className="navbar-brand brand-logo" to="/">
           Bootcamp Stats
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -109,4 +118,4 @@ class Navbar extends React.Component {
   }
 }
 
-export default Navbar;
+export default withRouter(Navbar);

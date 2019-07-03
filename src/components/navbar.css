@@ -24,3 +24,31 @@ a.nav-link.bootcamp-links {
   color: white;
   margin-left: 10px;
 }
+
+.signup:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.login:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.logout {
+  color: #f2f2f2;
+  border: none;
+  background: black;
+  outline: none !important;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.profile {
+  color: #f2f2f2;
+}
+
+.profile:hover {
+  color: white;
+  text-decoration: none;
+}

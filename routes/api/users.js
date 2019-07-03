@@ -123,4 +123,16 @@ router.post("/login", (req, res) => {
   });
 });
 
+router.get("/profile/:id", (req, res) => {
+  const { id } = req.params;
+
+  User.findOne({ _id: id }).then(user => {
+    if (user) {
+      res.json(user);
+    } else {
+      res.status(404).json("No such user");
+    }
+  });
+});
+
 module.exports = router;

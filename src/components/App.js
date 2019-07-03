@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
 import { Switch, Route } from "react-router-dom";
-import Navbar from "./Navbar";
+import Navbar from "./navbar_container";
 import MainPage from "./main/MainPage";
 import LoginFormContainer from "./session/login_form_container";
 import SignupFormContainer from "./session/signup_form_container";
