@@ -1,9 +1,10 @@
 import React from "react";
 import icon from "../images/favicon.ico";
+import "./navbar.css";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
       <a class="navbar-brand" href="#">
         <img src={icon} alt="bootcamp-stats" />
       </a>
@@ -11,55 +12,56 @@ const Navbar = () => {
         Bootcamp Stats
       </a>
       <button
-        className="navbar-toggler"
+        class="navbar-toggler"
         type="button"
         data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span className="navbar-toggler-icon" />
+        <span class="navbar-toggler-icon" />
       </button>
-      <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav">
-          <li className="nav-item nav-li active">
-            <a className="nav-link" href="#">
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li className="nav-item nav-li">
+            <a className="nav-link bootcamp-links" href="#">
               Home <span className="sr-only">(current)</span>
             </a>
           </li>
           <li className="nav-item nav-li">
-            <a className="nav-link" href="#">
+            <a className="nav-link bootcamp-links" href="#">
               App Academy
             </a>
           </li>
           <li className="nav-item nav-li">
-            <a className="nav-link" href="#">
+            <a className="nav-link bootcamp-links" href="#">
               Hack Reactor
             </a>
           </li>
           <li className="nav-item nav-li">
-            <a className="nav-link" href="#">
+            <a className="nav-link bootcamp-links" href="#">
               Flat Iron School
             </a>
           </li>
           <li className="nav-item nav-li">
-            <a className="nav-link" href="#">
+            <a className="nav-link bootcamp-links" href="#">
               General Assembly
             </a>
           </li>
           <li className="nav-item nav-li">
-            <a className="nav-link" href="#">
+            <a className="nav-link bootcamp-links" href="#">
               Coding Dojo
             </a>
           </li>
           <li className="nav-item nav-li">
-            <a className="nav-link" href="#">
+            <a className="nav-link bootcamp-links" href="#">
               Bloc
             </a>
           </li>
           <li className="nav-item nav-li">
-            <a className="nav-link" href="#">
+            <a className="nav-link bootcamp-links" href="#">
               Thinkful
             </a>
           </li>

@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import { Switch, Route } from "react-router-dom";
 import Navbar from "./Navbar";
-import MainPage from "./MainPage";
+import MainPage from "./main/MainPage";
 
 const App = () => (
   <div>
