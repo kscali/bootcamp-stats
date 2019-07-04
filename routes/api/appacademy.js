@@ -11,11 +11,11 @@ router.get("/", (req, res) => {
     .catch(err => res.status(404).json({ notusersfound: "No users found" }));
 });
 
-router.get("/user/:user_id", (req, res) => {
-  AA.find({ user: req.params.user_id })
-    .then(user => res.json(user))
-    .catch(err => res.status(404).json({ notuserfound: "No user found" }));
-});
+// router.get("/user/:user_id", (req, res) => {
+//   AA.find({ user: req.params.user_id })
+//     .then(user => res.json(user))
+//     .catch(err => res.status(404).json({ notuserfound: "No user found" }));
+// });
 
 router.get("/:id", (req, res) => {
   AA.findById(req.params.id)

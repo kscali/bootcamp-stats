@@ -6,6 +6,7 @@ import Navbar from "./navbar_container";
 import MainPage from "./main/MainPage";
 import LoginFormContainer from "./session/login_form_container";
 import SignupFormContainer from "./session/signup_form_container";
+import DataForm from "../components/data/data_form_container";
 import Footer from "./footer";
 
 const App = () => (
@@ -14,7 +15,8 @@ const App = () => (
     <Switch>
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
-      <AuthRoute exact path="/" component={MainPage} />
+      <ProtectedRoute exact path="/dataform" component={DataForm} />
+      <Route exact path="/" component={MainPage} />
     </Switch>
     <Footer />
   </div>

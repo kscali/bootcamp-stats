@@ -1,7 +1,7 @@
 footer {
   color: white;
   background: black;
-   color: white;
+  color: white;
   background: black;
 
   padding-top: 20px;
@@ -10,5 +10,4 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-
 }
