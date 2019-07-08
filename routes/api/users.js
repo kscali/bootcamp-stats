@@ -124,13 +124,17 @@ router.post("/login", (req, res) => {
 });
 
 router.get("/profile/:id", (req, res) => {
-  const { id } = req.params;
-
+  
+  const id = req.params.id;
+ 
   User.findOne({ _id: id }).then(user => {
+    debugger;
     if (user) {
+      user.password = "";
       res.json(user);
     } else {
-      res.status(404).json("No such user");
+      
+      res.status(404).json("Cannot this find user");
     }
   });
 });

@@ -17,7 +17,7 @@ const MainPage = () => {
       <div className="faq-section">
         <img
           className="faq"
-          src="https://ks-plt.s3-us-west-1.amazonaws.com/bootcamp-stats/answer-career-close-up-221164.jpg"
+          src="https://ks-plt.s3-us-west-1.amazonaws.com/bootcamp-stats/conceptual-cube-design-327186.jpg"
           alt="FAQ"
         />
         <div className="content">

@@ -62,23 +62,7 @@ class DataForm extends Component {
     };
 
     this.props.submit(user);
-    this.props.history.push("/profile");
-
-    // this.setState({
-    //   graduationYear: 0,
-    //   monthsToFindJob: 0,
-    //   jobApps: 0,
-    //   phoneScreens: 0,
-    //   onSites: 0,
-    //   referral: false,
-    //   coldApply: false,
-    //   haveDegree: false,
-    //   typeDegree: "No",
-    //   positionHired: "",
-    //   salary: 0,
-    //   yrsCoding: 0,
-    //   errors: {}
-    // });
+    this.props.history.push(`/profile/${this.state.user}`);
   }
 
   renderErrors() {
@@ -198,7 +182,7 @@ class DataForm extends Component {
                     className="form-control"
                     id="cold-apply"
                   >
-                    <option disabled selected selected value="">
+                    <option disabled selected value="">
                       Did you get your job through cold applications?
                     </option>
                     <option value="yes">Yes</option>
@@ -214,7 +198,7 @@ class DataForm extends Component {
                     className="form-control"
                     id="referral"
                   >
-                    <option disabled selected selected value="">
+                    <option disabled selected value="">
                       Did you get your job through a referral?
                     </option>
                     <option value="yes">Yes</option>
@@ -230,7 +214,7 @@ class DataForm extends Component {
                     className="form-control"
                     id="degree"
                   >
-                    <option disabled selected selected value="">
+                    <option disabled selected value="">
                       Do you have a degree?
                     </option>
                     <option value="yes">Yes</option>
