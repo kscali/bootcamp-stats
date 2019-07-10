@@ -1,0 +1,9 @@
+.survey-link {
+  color: black;
+  text-decoration: none;
+}
+
+.survey-link:hover {
+  font-weight: bold;
+  transform: scale(1);
+}
