@@ -31,8 +31,9 @@ const MainPage = () => {
           </h2>
 
           <h2>
-            We've done the work of aggregating the data from alumni to answer
-            all your questions.
+            {/* We've done the work of aggregating the data from alumni to answer
+            all your questions. */}
+            Please help us out by filling out a survey. Thank you.
           </h2>
         </div>
       </div>

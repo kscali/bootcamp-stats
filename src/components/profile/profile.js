@@ -23,9 +23,9 @@ export default class Profile extends Component {
           <h1 className="f4">Hello</h1>
           <h1 className="f4">{user.handle}</h1>
           <hr className="mw3 bb bw1 b--black-10" />
-          <Link className="survey-link" to="/dataform">
+          {/* <Link className="survey-link" to="/dataform">
             Answer Survey
-          </Link>
+          </Link> */}
         </div>
       </article>
     );

@@ -14,6 +14,9 @@ const HackReactorSchema = new Schema({
     type: Number,
     required: true
   },
+  background: {
+    type: String
+  },
   jobApps: {
     type: Number,
     required: true

@@ -57,11 +57,12 @@ class DataForm extends Component {
       coldApply: this.state.coldApply,
       haveDegree: this.state.haveDegree,
       typeDegree: this.state.typeDegree,
+      background: this.state.background,
       positionHired: this.state.positionHired,
       salary: this.state.salary,
       yrsCoding: this.state.yrsCoding
     };
-    debugger;
+
     switch (this.state.school) {
       case "App Academy":
         this.props.submitAaData(user);
@@ -298,6 +299,20 @@ class DataForm extends Component {
                     value={this.state.salary}
                     onChange={this.update("salary")}
                     placeholder="What was your starting salary?"
+                  />
+                </div>
+                <div className="mv3">
+                  <label className="db fw6 lh-copy f6" htmlFor="background">
+                    Background
+                  </label>
+                  <input
+                    className="pa2 input-reset ba bg-transparent hover-bg-black  w-100"
+                    type="text"
+                    name="background"
+                    id="background"
+                    value={this.state.background}
+                    onChange={this.update("background")}
+                    placeholder="What is your background? ex: teaching, music, math"
                   />
                 </div>
                 <div className="mv3">

@@ -41,6 +41,7 @@ router.post(
       haveDegree: req.body.haveDegree,
       typeDegree: req.body.typeDegree,
       positionHired: req.body.positionHired,
+      background: req.body.background,
       salary: req.body.salary,
       yrsCoding: req.body.yrsCoding
     });

@@ -18,6 +18,9 @@ const BlocSchema = new Schema({
     type: Number,
     required: true
   },
+  background: {
+    type: String
+  },
   phoneScreens: {
     type: Number
   },

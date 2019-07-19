@@ -36,6 +36,9 @@ const AppAcademySchema = new Schema({
   typeDegree: {
     type: String
   },
+  background: {
+    type: String
+  },
   positionHired: {
     type: String
   },

@@ -75,7 +75,7 @@ class Navbar extends React.Component {
                 Home <span className="sr-only">(current)</span>
               </a>
             </li>
-            <li className="nav-item nav-li">
+            {/* <li className="nav-item nav-li">
               <a className="nav-link bootcamp-links" href="#">
                 App Academy
               </a>
@@ -109,7 +109,7 @@ class Navbar extends React.Component {
               <a className="nav-link bootcamp-links" href="#">
                 Thinkful
               </a>
-            </li>
+            </li> */}
           </ul>
           {this.getLinks()}
         </div>
