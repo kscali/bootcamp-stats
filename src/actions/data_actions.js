@@ -27,6 +27,59 @@ export const appAcademyData = user => dispatch => {
   );
 };
 
-export const getUser = (userId) => dispatch => (
-  APIUtil.getUser(userId).then(user => dispatch(receiveUser(user)))
-)
+export const hackReactorData = user => dispatch => {
+  return APIUtil.hackReactorData(user).then(
+    //   () => dispatch(receiveAAData()),
+    //   err => dispatch(receiveErrors(err.response.data))
+    // );
+    res => res.data.user._id
+  );
+};
+
+export const blocData = user => dispatch => {
+  return APIUtil.blocData(user).then(
+    //   () => dispatch(receiveAAData()),
+    //   err => dispatch(receiveErrors(err.response.data))
+    // );
+    res => res.data.user._id
+  );
+};
+
+export const flatIronData = user => dispatch => {
+  return APIUtil.flatIronData(user).then(
+    //   () => dispatch(receiveAAData()),
+    //   err => dispatch(receiveErrors(err.response.data))
+    // );
+    res => res.data.user._id
+  );
+};
+
+export const generalAssemblyData = user => dispatch => {
+  return APIUtil.generalAssemblyData(user).then(
+    //   () => dispatch(receiveAAData()),
+    //   err => dispatch(receiveErrors(err.response.data))
+    // );
+    res => res.data.user._id
+  );
+};
+
+export const thinkfulData = user => dispatch => {
+  return APIUtil.thinkfulData(user).then(
+    //   () => dispatch(receiveAAData()),
+    //   err => dispatch(receiveErrors(err.response.data))
+    // );
+    res => res.data.user._id
+  );
+};
+
+export const codingDojoData = user => dispatch => {
+  return APIUtil.codingDojoData(user).then(
+    //   () => dispatch(receiveAAData()),
+    //   err => dispatch(receiveErrors(err.response.data))
+    // );
+    res => res.data.user._id
+  );
+};
+
+export const getUser = userId => dispatch =>
+  APIUtil.getUser(userId).then(user => dispatch(receiveUser(user)));

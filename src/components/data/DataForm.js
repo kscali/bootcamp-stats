@@ -7,19 +7,20 @@ class DataForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      school: null,
       user: this.props.currentUser.id,
-      graduationYear: 0,
-      monthsToFindJob: 0,
-      jobApps: 0,
-      phoneScreens: 0,
-      onSites: 0,
+      graduationYear: "",
+      monthsToFindJob: "",
+      jobApps: "",
+      phoneScreens: "",
+      onSites: "",
       referral: false,
       coldApply: false,
       haveDegree: false,
       typeDegree: "No",
       positionHired: "",
-      salary: 0,
-      yrsCoding: 0,
+      salary: "",
+      yrsCoding: "",
       errors: {}
     };
 
@@ -60,8 +61,33 @@ class DataForm extends Component {
       salary: this.state.salary,
       yrsCoding: this.state.yrsCoding
     };
+    debugger;
+    switch (this.state.school) {
+      case "App Academy":
+        this.props.submitAaData(user);
+        break;
+      case "Hack Reactor":
+        this.props.submitHrData(user);
+        break;
+      case "Flat Iron School":
+        this.props.submitFiData(user);
+        break;
+      case "General Assembly":
+        this.props.submitGaData(user);
+        break;
+      case "Bloc":
+        this.props.submitBlocData(user);
+        break;
+      case "Thinkful":
+        this.props.submitThinkfulData(user);
+        break;
+      case "Coding Dojo":
+        this.props.submitCdData(user);
+        break;
+      default:
+        return null;
+    }
 
-    this.props.submit(user);
     this.props.history.push(`/profile/${this.state.user}`);
   }
 
@@ -90,13 +116,17 @@ class DataForm extends Component {
                   <label htmlFor="sel1" className="db fw6 lh-copy f6">
                     Which coding bootcamp did you attend?
                   </label>
-                  <select className="form-control" id="sel1">
+                  <select
+                    onChange={this.update("school")}
+                    className="form-control"
+                    id="sel1"
+                  >
                     <option selected value="" disabled>
                       Please Select a Bootcamp
                     </option>
                     <option value="App Academy">App Academy</option>
                     <option value="Hack Reactor">Hack Reactor</option>
-                    <option value="Flat Iron">Flat Iron School</option>
+                    <option value="Flat Iron School">Flat Iron School</option>
                     <option value="General Assembly">General Assembly</option>
                     <option value="Bloc">Bloc</option>
                     <option value="Thinkful">Thinkful</option>

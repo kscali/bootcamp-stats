@@ -54,7 +54,7 @@ class Navbar extends React.Component {
           <img src={icon} alt="bootcamp-stats" />
         </Link>
         <Link className="navbar-brand brand-logo" to="/">
-          Bootcamp Stats
+          BootCamp Stats
         </Link>
         <button
           className="navbar-toggler"
